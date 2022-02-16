@@ -13,6 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Run lint
-      run: make lint
+    - name: setup-python
+      uses: actions/setup-python@v2
+    - name: install1
+      run:  pip install poetry
+    - name: install2
+      run: make install
+    - name: run-linter
+      run:  make lint
