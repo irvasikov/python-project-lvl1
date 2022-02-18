@@ -2,6 +2,7 @@
 import prompt
 import random
 
+
 def calc():
     sings = ("+", "-", "*")
     sing = random.randint(0, 3)
@@ -15,6 +16,7 @@ def calc():
     else:
         right_answer = num1 * num2
     return (stroka, right_answer)
+
 
 def main():
     print("Welcome to the Brain Games!")
@@ -33,8 +35,6 @@ def main():
             break
     if count == 3:
         print(f"Congratulations, { name }!")
-
-
 
 
 if __name__ == '__main__':
