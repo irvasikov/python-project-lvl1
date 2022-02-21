@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from random import randint
-import engine
+from brain_games.scripts import engine
 
 
 def even_number_or_not(number: int) -> str:

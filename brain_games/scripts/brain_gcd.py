@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import random
-import engine
+from brain_games.scripts import engine
 
 
 def gcd_rem_division(num1, num2):
