@@ -9,7 +9,7 @@ def calc():
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
     znak = sings[sing]
-    stroka = f"{ num1 } {znak} { num2 }"
+    stroka = f"Question: { num1 } {znak} { num2 }"
     if sings[sing] == "+":
         right_answer = num1 + num2
     elif sings[sing] == "-":
