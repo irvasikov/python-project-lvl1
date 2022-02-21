@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from random import randint
-import brain_games
+import engine
 
 
 def even_number_or_not(number: int) -> str:
@@ -29,7 +29,7 @@ def main():
         right_answer = even_number_or_not(number)
         q_and_a["questions"].append(question)
         q_and_a["answers"].append(right_answer)
-    brain_games.main(q_and_a)
+    engine.main(q_and_a)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import random
-import brain_games
+import engine
 
 
 def progression():
@@ -30,7 +30,7 @@ def main():
         question = f"Question: { str_numbers }"
         q_and_a["questions"].append(question)
         q_and_a["answers"].append(right_answer)
-    brain_games.main(q_and_a)
+    engine.main(q_and_a)
 
 
 if __name__ == "__main__":

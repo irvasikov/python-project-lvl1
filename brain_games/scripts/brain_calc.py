@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import random
-import brain_games
+import engine
 
 
 def calc():
@@ -30,7 +30,7 @@ def main():
         q, a = calc()
         q_and_a["questions"].append(q)
         q_and_a["answers"].append(a)
-    brain_games.main(q_and_a)
+    engine.main(q_and_a)
 
 
 if __name__ == '__main__':
