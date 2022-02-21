@@ -1,13 +1,6 @@
 #!/usr/bin/env python
-import prompt
 from random import randint
-
-
-def welcome_user():
-    print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, { name }!")
-    return name
+import brain_games
 
 
 def even_number_or_not(number: int) -> str:
@@ -24,24 +17,19 @@ def get_random_number() -> int:
 
 def main():
     """Main function in this module"""
-    name = welcome_user()
-    print("""Answer "yes" if the number is even, otherwise answer "no".""")
-    count = 0
-    while count != 3:
+    main_question = 'Answer "yes" if the number is even, otherwise answer "no".'
+    q_and_a = {
+        "main question": main_question,
+        "answers": [],
+        "questions": [],
+    }
+    for i in range(0, 3):
         number = get_random_number()
-        answer_from_user = prompt.string(f"Question: { number }")
-        print(f"Your answer: { answer_from_user }")
+        question = f"Question: { number }"
         right_answer = even_number_or_not(number)
-        if answer_from_user != right_answer:
-            string_to_ans1 = f"'{ answer_from_user }' is wrong answer ;(. "
-            string_to_ans2 = f"Correct answer was '{ right_answer }'."
-            print(string_to_ans1 + string_to_ans2)
-            print(f"Let's try again, { name }!")
-            count = 0
-        else:
-            print("Correct!")
-            count += 1
-    print(f"Congratulations, { name }!")
+        q_and_a["questions"].append(question)
+        q_and_a["answers"].append(right_answer)
+    brain_games.main(q_and_a)
 
 
 if __name__ == "__main__":
